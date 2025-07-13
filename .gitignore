@@ -1,0 +1,455 @@
+# =============================================================================
+# .gitignore para Genesis-Core
+# Orquestador central del ecosistema Genesis Engine
+# =============================================================================
+
+# ===== PYTHON =====
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+test-results/
+test-reports/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff (aunque no usamos Django, por si acaso)
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff (aunque no usamos Flask, por si acaso)
+instance/
+.webassets-cache
+
+# Scrapy stuff
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+docs/.doctrees/
+.readthedocs.yml.backup
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff (por si usamos Celery en el futuro)
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# ===== ENTORNOS VIRTUALES =====
+# Entornos virtuales Python
+venv/
+.venv/
+env/
+.env/
+ENV/
+env.bak/
+venv.bak/
+.virtualenv
+
+# conda environments
+.conda/
+
+# ===== VARIABLES DE ENTORNO Y SECRETS =====
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.test
+
+# Secrets y configuraciones sensibles
+secrets/
+.secrets/
+config/secrets.json
+config/local.json
+*.key
+*.pem
+*.p12
+*.pfx
+
+# API keys y tokens
+.api-keys
+api-keys.json
+tokens.json
+
+# ===== GENESIS-CORE ESPECÍFICO =====
+# Archivos de estado temporal
+state/
+.genesis-core/
+.genesis-state/
+temp/
+.temp/
+cache/
+.cache/
+
+# Logs específicos de Genesis Core
+logs/
+*.log
+genesis-core.log
+orchestrator.log
+workflow-*.log
+
+# Archivos de debug
+debug/
+.debug/
+trace/
+.trace/
+
+# Archivos de métricas temporales
+metrics/
+.metrics/
+stats/
+.stats/
+
+# Archivos de persistencia temporal
+persistence/
+.persistence/
+checkpoints/
+.checkpoints/
+
+# Archivos de backup
+backups/
+.backups/
+*.backup
+*.bak
+
+# Archivos de configuración local/desarrollo
+config/local.py
+config/dev.py
+config/development.py
+local_config.py
+dev_config.py
+
+# ===== TESTING =====
+# Archivos de test específicos
+test_outputs/
+test_results/
+test_logs/
+.test_cache/
+
+# Fixtures grandes o generadas
+tests/fixtures/large/
+tests/fixtures/generated/
+tests/data/large/
+
+# Screenshots de tests (si usamos testing visual)
+tests/screenshots/
+test-screenshots/
+
+# Reportes de performance
+performance_reports/
+benchmark_results/
+
+# ===== DESARROLLO Y HERRAMIENTAS =====
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Emacs
+\#*\#
+.\#*
+
+# VS Code específico
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+.vscode/extensions.json
+.vscode/*.code-snippets
+
+# ===== SISTEMA OPERATIVO =====
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ===== DEPENDENCIAS Y PAQUETES =====
+# Node.js (por si tenemos scripts de build)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+package-lock.json
+yarn.lock
+
+# ===== DOCKER Y CONTENEDORES =====
+# Docker
+.dockerignore
+docker-compose.override.yml
+.docker/
+
+# ===== DOCUMENTACIÓN =====
+# Sphinx builds
+_build/
+_static/
+_templates/
+
+# MkDocs
+/site
+
+# Doxygen
+html/
+latex/
+
+# ===== MONITORING Y MÉTRICAS =====
+# Archivos de Prometheus (por si usamos métricas)
+prometheus/
+*.prom
+
+# Grafana dashboards locales
+grafana/
+
+# ===== CI/CD =====
+# Archivos temporales de CI
+.github/
+!.github/workflows/
+!.github/ISSUE_TEMPLATE/
+!.github/pull_request_template.md
+!.github/dependabot.yml
+
+# Artifacts de build de CI
+artifacts/
+build-artifacts/
+
+# ===== REDIS Y BASES DE DATOS =====
+# Redis dumps (por si usamos Redis para estado)
+dump.rdb
+*.rdb
+
+# SQLite (por si usamos SQLite para persistencia local)
+*.sqlite
+*.sqlite3
+*.db
+
+# ===== ARCHIVOS TEMPORALES ESPECÍFICOS =====
+# Archivos de workflow temporales
+workflow-*.json
+task-*.json
+state-*.json
+
+# Archivos de lock temporales
+*.lock
+.lock
+
+# Archivos de PID
+*.pid
+
+# Archivos temporales del sistema
+*.tmp
+*.temp
+.tmp/
+.temp/
+
+# ===== ARCHIVOS DE DESARROLLO LOCAL =====
+# Scripts de desarrollo personal
+dev-scripts/
+scripts/dev/
+local-scripts/
+
+# Notebooks de Jupyter para debugging
+notebooks/
+*.ipynb
+
+# Archivos de playground/testing
+playground/
+sandbox/
+scratch/
+
+# ===== ARCHIVOS DE CONFIGURACIÓN ESPECÍFICOS =====
+# Configuraciones de mypy cache
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Ruff cache
+.ruff_cache/
+
+# Black cache
+.black/
+
+# isort cache
+.isort.cfg
+
+# ===== ARCHIVOS GRANDES Y BINARIOS =====
+# Archivos que no deberían estar en git
+*.zip
+*.tar.gz
+*.rar
+*.7z
+*.dmg
+*.iso
+
+# Archivos de imagen grandes
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.ico
+
+# Videos
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Archivos de audio
+*.mp3
+*.wav
+*.ogg
+
+# ===== OTROS =====
+# Archivos de Cloudflare Workers (por si usamos)
+.wrangler/
+
+# Terraform (por si tenemos IaC)
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# ===== COMENTARIOS PARA EL EQUIPO =====
+# Si necesitas agregar algo temporal durante desarrollo,
+# úsalo pero recuerda removerlo antes del commit:
+# TODO: Remover antes de commit
+# tmp-*
+# test-*
+# debug-*
+
+# ===== FIN =====

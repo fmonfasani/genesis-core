@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "genesis-core"
+version = "1.0.0"
+description = "Core orchestration engine for Genesis Engine ecosystem"
+authors = [{name = "Genesis Team", email = "team@genesis-engine.dev"}]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+    "mcpturbo>=1.0.0",          # CRÍTICO: Dependencia de MCPturbo
+    "pydantic>=2.5.0",
+    "asyncio-mqtt>=0.11.0",
+    "redis>=5.0.0",             # Para estado distribuido
+    "sqlalchemy>=2.0.0",        # Para persistencia
+    "tenacity>=8.2.0",          # Para retry logic
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "mypy>=1.7.0",
+    "ruff>=0.1.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["genesis_core*"]
+
+[tool.black]
+line-length = 88
+target-version = ['py39']
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+python_version = "3.9"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --cov=genesis_core --cov-report=term-missing"
+asyncio_mode = "auto"
